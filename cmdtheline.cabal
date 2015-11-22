@@ -1,5 +1,5 @@
 Name: cmdtheline
-Version: 0.3.0.0
+Version: 0.3.0.1
 Synopsis: Declarative command-line option parsing and documentation library.
 Description:
   CmdTheLine aims to remove tedium from the definition of command-line
@@ -57,7 +57,7 @@ Author:        Eli Frey
 Maintainer:    Eli Frey <eli.lee.frey gmail com>
 Stability:     Experimental
 Category:      Console
-Cabal-version: >=1.8
+Cabal-version: >=1.10
 Build-type:    Simple
 
 Extra-source-files: doc/examples/*.hs, README.md
@@ -93,22 +93,28 @@ Library
                    System.Console.CmdTheLine.Manpage,
                    System.Console.CmdTheLine.CmdLine
 
-test-suite Main
-  type:          exitcode-stdio-1.0
-  build-depends: base >= 4 && < 5, HUnit  >= 1.2.4 && < 2,
-                 test-framework >= 0.6 && < 0.9,
-                 test-framework-hunit >= 0.2 && < 0.4,
-                 containers >= 0.4 && < 0.6,
-                 parsec >= 3.1 && < 3.2, pretty >= 1.1 && < 1.2,
-                 process >= 1.1, directory >= 1.1,
-                 transformers >= 0.2 && < 0.4, filepath >= 1.3 && < 1.4
-  ghc-options:   -Wall -Werror -fno-warn-name-shadowing -rtsopts
-  hs-source-dirs: src, test
-  main-is:        Main.hs
-  other-modules:  Arith,
-                  Cipher,
-                  CP,
-                  Fail,
-                  FizzBuzz,
-                  Grep,
-                  Hello
+-- test-suite Main
+--   type:          exitcode-stdio-1.0
+--   build-depends: base >= 4 && < 5
+--                , HUnit  >= 1.2.4 && < 2
+--                , test-framework >= 0.6 && < 0.9
+--                , test-framework-hunit >= 0.2 && < 0.4
+--                , containers
+--                , parsec
+--                , pretty
+--                , process >= 1.1
+--                , directory
+--                , transformers
+--                , filepath
+--                , cmdtheline
+-- 
+--   ghc-options:   -Wall -Werror -fno-warn-name-shadowing -rtsopts
+--   hs-source-dirs: src, test
+--   main-is:        Main.hs
+--   other-modules:  Arith,
+--                   Cipher,
+--                   CP,
+--                   Fail,
+--                   FizzBuzz,
+--                   Grep,
+--                   Hello

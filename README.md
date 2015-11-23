@@ -1,15 +1,17 @@
-CmdTheLine v0.2.1
+CmdTheLine v0.3.0
 ===============
-
-[![Build Status](https://secure.travis-ci.org/eli-frey/cmdtheline.png)](http://travis-ci.org/eli-frey/cmdtheline)
 
 Command line option parsing with applicative functors.
 
 Installation
 ------------
-To install, do
+To install, donwload repo and exec cmd
 
     cabal install
+
+or install with stack
+
+    stack setup ; stack build ; stack install
 
 Depends
 -------
@@ -32,7 +34,7 @@ Branches
 --------
 
 ###master
-The currently (0.2) stable branch.
+The currently (0.3) stable branch working with ghc-7.10
 
 ###dev
 Bug fixes and aditions that don't break compatibility with master.
@@ -44,6 +46,7 @@ Contributors
 ------------
 
 Bas Van Dijk -- GetOpt adapter
+Uwe Schmidt  -- ghc-7.10 support
 
 LICENSE
 -------
